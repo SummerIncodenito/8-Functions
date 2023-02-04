@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My 8 Functions</title>
+    <link rel="stylesheet" href="shop.css" />
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+        <p>Enter your text or URL</p>
+        <input type="text" placeholder="Text or URL" id="qrText">
+
+        <div id="imgBox">
+            <img src="" id="qrImage">
+        </div>
+        <button onclick="generateQR()">Generate QR CODE</button>
+    </div>
+
+  
+
+    <script> 
+
+    let imgBox = document.getElementById("imgBox");
+    let qrImage = document.getElementById("qrImage");
+    let qrText = document.getElementById("qrText");
+
+    function generateQR(){
+        if(qrText.value.length > 0){
+            qrImage.src ="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="
+            + qrText.value;
+            imgBox.classList.add("show-img");
+
+        }else{
+            qrText.classList.add('error');
+            setTimeout(() => {
+                qrText.classList.remove('error');
+            }, 1000);
+        }
+        
+        
+    }
+
+
+    </script>
+
+    
+
+    <!-- JavaScript Files -->
+
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>

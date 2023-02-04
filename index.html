@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My 8 Functions</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <div class="hero">
+        <nav>
+            
+            <img src="logo.1png.png" class="logo-img">
+            <ul>
+                
+                <li><a href="shop.html" class="btn">QR CODE</a></li>
+                <li><a href="submit.html" class="btn">FORM-SUB</a></li>
+                <li><a href="group5.html" class="btn">CONDI</a></li>
+                <li><a href="list.html" class="btn">TODOLIST</a></li>
+                <li><a href="cart.html" class="btn fa fa-shopping-cart"></a></li>
+
+            </ul>
+            
+            <img src="moon.png " class="btn" id="icon">
+        
+        </nav>
+
+        <div class="info">
+    
+            <h1>I'm <span>Myka</span> Vargas</h1>
+            <p>This is my compilation of 8 JS Functions, (Student Activity purposes only)</p>
+            <li><a href="account.html" class="btn">Sign up</a></li>
+            
+        </div>
+
+        <div class="img-box">
+            <img src="dm.svg" class="back-img">
+        </div>
+
+        <br>
+
+        <div class="social-links">
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+        </div>
+
+        
+        
+    </div>
+    
+
+    <script>
+        var icon = document.getElementById("icon");
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-theme");
+            if(document.body.classList.contains('dark-theme')){
+                icon.src="sun.png";
+            }else{
+                icon.src = "moon.png";
+            }
+        }
+    </script>
+
+    <!-- JavaScript Files -->
+
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
